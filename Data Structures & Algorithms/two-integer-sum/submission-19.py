@@ -1,0 +1,8 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        indices = {}
+        for i, n in enumerate(nums):
+            remain = target - n
+            if remain in indices:
+                return [indices[remain], i]
+            indices[n] = i
